@@ -12,6 +12,9 @@ const server = http.createServer((req,res) => {
         res.write("<h1>GETでアクセスしました</h1>");
         //Feature-01で行追加
         res.write("<h2>Feature-01追加分の行です</h2>");
+
+        //Feature-02で行追加
+        res.write("</br><h2>Feature-02追加分の行です</h2>");
     }
 
     //リクエストがPOSTだった場合
