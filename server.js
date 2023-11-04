@@ -18,6 +18,8 @@ const server = http.createServer((req,res) => {
     }
     res.end();
 
+    console.log("TEST用出力");
+
 });
 
 server.listen(PORT,() => {
