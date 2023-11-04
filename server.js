@@ -5,9 +5,19 @@ const html = require("fs").readFileSync("./index.html")
 //Webサーバーを作る
 const server = http.createServer((req,res) => {
     //ブラウザからアクセス来た時の処理
-    res.writeHead(200,{"Content-Type":"text/html"});
-    res.write(html);
+    res.writeHead(200,{"Content-Type":"text/html;charset=UTF-8"});
+ 
+    //リクエストがGETだった場合
+    if(req.method == "GET"){
+        res.write("<h1>GETでアクセスしました</h1>")
+    }
+
+    //リクエストがPOSTだった場合
+    if(req.method == "POST"){
+        res.write("<h1>POSTでアクセスしました</h1>")
+    }
     res.end();
+
 });
 
 server.listen(PORT,() => {
