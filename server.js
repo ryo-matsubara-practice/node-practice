@@ -9,12 +9,14 @@ const server = http.createServer((req,res) => {
  
     //リクエストがGETだった場合
     if(req.method == "GET"){
-        res.write("<h1>GETでアクセスしました</h1>")
+        res.write("<h1>GETでアクセスしました</h1>");
+        //Feature-01で行追加
+        res.write("<h2>Feature-01追加分の行です</h2>");
     }
 
     //リクエストがPOSTだった場合
     if(req.method == "POST"){
-        res.write("<h1>POSTでアクセスしました</h1>")
+        res.write("<h1>POSTでアクセスしました</h1>");
     }
     res.end();
 
