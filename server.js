@@ -15,6 +15,9 @@ const server = http.createServer((req,res) => {
 
         //Feature-02で行追加
         res.write("</br><h2>Feature-02追加分の行です</h2>");
+
+        //Feature/03で追加
+        res.write(html);
     }
 
     //リクエストがPOSTだった場合
