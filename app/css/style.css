@@ -1,0 +1,34 @@
+/*初めに文字コードを指定*/
+@charset "utf-8";
+
+/*
+  セレクタ{
+    プロパティ：値
+  }
+
+    ・「.クラス名」でクラス名をセレクタにできる
+    ・「#id名」でIDをセレクタにできる
+    ・「>」は子セレクタ（直下セレクタ）のみスタイルを適用させる
+*/
+
+/*body部(Webサイト全体)の設定*/
+body{
+    /*左からの優先順位でフォントが充てられる*/
+    font-family: 'Hiragino Kaku Gothic Pro','Meiryo',sans-serif;
+    font-size: 15px;
+
+}
+
+/*logoクラスを中央寄せにする*/
+.logo{
+    /*インライン要素やインラインブロック要素を中央配置にする場合は、
+    親要素にtext-alignやvertical-alignを指定する
+    logoクラス(親)にtext-alignを設定したので子要素(img,p)に適用される
+    */
+    text-align: center;
+}
+
+#logo-head{
+    /*ロゴ画像の下にマージンを設定*/
+    margin-bottom: 5px;
+}
